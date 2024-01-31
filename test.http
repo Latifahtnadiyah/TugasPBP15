@@ -1,0 +1,94 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "latifah",
+  "password" : "rahasia",
+  "name" : "nanad"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "latifah",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+{
+  "name" : "tasli"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+###
+
+POST http://localhost:3000/api/perpustakaan
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+{
+  "title" : "Senja",
+  "author" : "Morro",
+  "publication_year" : "2024",
+  "genre" : "Komedi"
+}
+
+###
+
+GET http://localhost:3000/api/perpustakaan
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+###
+
+GET http://localhost:3000/api/perpustakaan/1
+Content-Type: application/json
+Accept: application/json
+Authorization:6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+### Update
+
+PUT http://localhost:3000/api/perpustakaan/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
+
+{
+  "title" : "hujan",
+  "author" : "Morro",
+  "publication_year" : "2022",
+  "genre" : "Komedi"
+}
+
+### Delete Contact
+
+DELETE http://localhost:3000/api/perpustakaan/1
+Content-Type: application/json
+Accept: application/json
+Authorization: 6efbc270-3252-4063-8c4c-73ad0eb8d7f8
